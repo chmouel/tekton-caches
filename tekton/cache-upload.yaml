@@ -84,7 +84,7 @@ spec:
       value: $(params.awsCredentialFile)
     - name: BLOB_QUERY_PARAMS
       value: $(params.blobQueryParams)
-  image: ghcr.io/chmouel/tekton-caches/cache:latest
+  image: ghcr.io/chmouel/tekton-caches/cache@sha256:250e8ff0237b326614971c4b3a3488744852872ce49d1e651e6ab4a053ea33fd
   args: ["$(params.patterns[*])"]
   script: |
     #!/usr/bin/env sh
