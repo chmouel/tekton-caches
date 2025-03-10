@@ -84,7 +84,7 @@ spec:
       value: $(params.awsCredentialFile)
     - name: BLOB_QUERY_PARAMS
       value: $(params.blobQueryParams)
-  image: quay.io/openshift-pipeline/pipelines-cache-rhel9:next
+  image: ghcr.io/chmouel/tekton-caches/cache:latest
   args: ["$(params.patterns[*])"]
   script: |
     #!/usr/bin/env sh
